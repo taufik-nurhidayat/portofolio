@@ -1,36 +1,18 @@
 ---
-import NavbarNavigation from "./NavbarNavigation.astro";
+import MobileNavigation from "./MobileNavigation.astro";
+import { navigations } from "../data/en/navigations";
 ---
 
-<header class="shadow-lg">
-  <nav class="container mx-auto navbar bg-base-100">
+<header class="">
+  <nav class="container lg:max-w-6xl mx-auto navbar bg-base-100">
     <div class="flex-1">
-      <a
-        href="/"
-        hx-indicator=".progress-bar"
-        class="btn btn-square btn-ghost no-animation text-xl"
-      >
-        <svg
-          class="h-full fill-current"
-          version="1.1"
-          viewBox="0 0 120 120"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="m15 15v15h25v65l15 15v-95h-40zm50 0v95l15-15v-65h25v-15h-40zm-50 25v32.5l15 15v-47.5h-15zm75 0v47.5l15-15v-32.5h-15z"
-          ></path>
-        </svg>
-      </a>
-    </div>
-    <div class="flex-none">
-      <ul class="menu menu-horizontal px-1 hidden lg:inline-flex">
-        <NavbarNavigation />
-      </ul>
-      <div class="dropdown dropdown-end lg:hidden">
+      <div class="dropdown lg:hidden">
         <button tabindex="0" class="btn btn-ghost btn-square">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="w-6 h-6"
+            class="icon icon-tabler icon-tabler-layout-grid"
+            width="36"
+            height="36"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
@@ -38,15 +20,54 @@ import NavbarNavigation from "./NavbarNavigation.astro";
             stroke-linecap="round"
             stroke-linejoin="round"
             ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-              d="M4 8l16 0"></path><path d="M4 16l16 0"></path></svg
+              d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"
+            ></path><path
+              d="M14 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"
+            ></path><path
+              d="M4 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"
+            ></path><path
+              d="M14 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"
+            ></path></svg
           >
         </button>
-        <ul
-          class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-        >
-          <NavbarNavigation />
-        </ul>
+        <MobileNavigation />
       </div>
+      <a
+        href="/"
+        hx-indicator=".progress-bar"
+        class="btn btn-square btn-ghost no-animation text-xl"
+      >
+        <svg
+          width="120"
+          height="120"
+          version="1.1"
+          viewBox="0 0 120 120"
+          xmlns="http://www.w3.org/2000/svg"
+          class="fill-current w-10 h-10"
+        >
+          <path
+            d="m15 20v15h25v65l15 15v-95zm50 0v95l15-15v-65h25v-15zm-50 25v32.5l15 15v-47.5zm75 0v47.5l15-15v-32.5z"
+          ></path>
+        </svg>
+      </a>
+    </div>
+    <div class="flex-none">
+      <ul class="hidden lg:flex">
+        {
+          navigations.map((item) => (
+            <li>
+              <a
+                href={item.link}
+                class="inline-flex items-center px-4 hover:opacity-75 duration-300"
+                style="max-height: 3rem;height: 3rem;"
+              >
+                {item.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <button class="btn btn-primary ml-4">Contact Me</button>
     </div>
   </nav>
 </header>

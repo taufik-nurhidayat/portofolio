@@ -1,0 +1,32 @@
+---
+import { navigations } from "../data/en/navigations";
+---
+
+<ul
+  class="menu dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 border"
+>
+  {
+    navigations.map((item) => (
+      <li>
+        {item.children ? (
+          <details>
+            <summary>{item.title}</summary>
+            <ul class="p-2 bg-base-100 rounded-t-none">
+              {item.children.map((children) => (
+                <li>
+                  <a href={children.link} hx-indicator=".progress-bar">
+                    {children.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </details>
+        ) : (
+          <a hx-indicator=".progress-bar" href={item.link}>
+            {item.title}
+          </a>
+        )}
+      </li>
+    ))
+  }
+</ul>
