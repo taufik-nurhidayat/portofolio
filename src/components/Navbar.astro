@@ -3,7 +3,7 @@ import MobileNavigation from "./MobileNavigation.astro";
 import { navigations } from "../data/en/navigations";
 ---
 
-<header class="">
+<header class="top-0" id="header">
   <nav class="container lg:max-w-6xl mx-auto navbar bg-base-100">
     <div class="flex-1">
       <div class="dropdown lg:hidden">
@@ -45,6 +45,7 @@ import { navigations } from "../data/en/navigations";
           xmlns="http://www.w3.org/2000/svg"
           class="fill-current w-10 h-10"
         >
+          <title>Taufik Nurhidayat Logo</title>
           <path
             d="m15 20v15h25v65l15 15v-95zm50 0v95l15-15v-65h25v-15zm-50 25v32.5l15 15v-47.5zm75 0v47.5l15-15v-32.5z"
           ></path>
@@ -52,7 +53,7 @@ import { navigations } from "../data/en/navigations";
       </a>
     </div>
     <div class="flex-none">
-      <ul class="hidden lg:flex">
+      <ul class="hidden lg:flex text-sm">
         {
           navigations.map((item) => (
             <li>
@@ -67,7 +68,20 @@ import { navigations } from "../data/en/navigations";
           ))
         }
       </ul>
-      <button class="btn btn-primary ml-4">Contact Me</button>
+      <a class="btn btn-primary ml-4" href="#contact">Contact Me</a>
     </div>
   </nav>
 </header>
+<script>
+  document.addEventListener("scroll", () => {
+    let scroll_value: number = scrollY;
+    let header = document.getElementById("header");
+    if (scroll_value > 180) {
+      header?.classList.add("sticky");
+      header?.classList.add("shadow-lg");
+    } else {
+      header?.classList.remove("sticky");
+      header?.classList.remove("shadow-lg");
+    }
+  });
+</script>
