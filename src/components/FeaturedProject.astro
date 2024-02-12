@@ -1,0 +1,17 @@
+---
+import { getCollection } from "astro:content";
+import Section from "./Section.astro";
+const projects = await getCollection("project", ({ data }) => {
+  return data.featured === true;
+});
+---
+
+<Section id="featured_project" title="Featured Project">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    {
+      projects.map((project) => (
+        <div class="p-4 border rounded-box">{project.data.title}</div>
+      ))
+    }
+  </div>
+</Section>
