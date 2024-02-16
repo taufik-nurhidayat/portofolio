@@ -7,10 +7,18 @@ const projects = await getCollection("project", ({ data }) => {
 ---
 
 <Section id="featured_project" title="Featured Project">
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
     {
       projects.map((project) => (
-        <div class="p-4 border rounded-box">{project.data.title}</div>
+        <div class="group relative">
+          <img src={project.data.cover} alt={project.data.title} class="" />
+          <a
+            href={`/projects/${project.slug}`}
+            class="hidden group-hover:flex absolute top-0 left-0 bottom-0 right-0 items-center justify-center bg-base-100/60"
+          >
+            <span class="btn btn-outline">Full Story</span>
+          </a>
+        </div>
       ))
     }
   </div>

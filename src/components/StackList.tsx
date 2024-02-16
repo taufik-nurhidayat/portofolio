@@ -1,5 +1,8 @@
 import {
   IconBrandAlpineJs,
+  IconBrandCss3,
+  IconBrandHtml5,
+  IconBrandJavascript,
   IconBrandNextjs,
   IconBrandReact,
   IconBrandRust,
@@ -28,10 +31,6 @@ export default function StackList() {
       icon: IconBrandAlpineJs,
     },
     {
-      title: "HTMX",
-      icon: IconBrandHtmx,
-    },
-    {
       title: "VueJS",
       icon: IconBrandVue,
     },
@@ -40,12 +39,28 @@ export default function StackList() {
       icon: IconBrandNextjs,
     },
     {
+      title: "htmx",
+      icon: IconBrandHtmx,
+    },
+    {
       title: "TailwindCSS",
       icon: IconBrandTailwind,
     },
     {
+      title: "HTML5",
+      icon: IconBrandHtml5,
+    },
+    {
+      title: "CSS3",
+      icon: IconBrandCss3,
+    },
+    {
       title: "TypeScript",
       icon: IconBrandTypescript,
+    },
+    {
+      title: "Javascript",
+      icon: IconBrandJavascript,
     },
     {
       title: "Rust",

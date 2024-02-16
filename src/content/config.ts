@@ -4,6 +4,7 @@ const projectCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     featured: z.boolean(),
+    cover: z.string(),
   }),
 });
 export const collections = {
