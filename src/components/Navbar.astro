@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import face from "../../public/face.jpg";
 import MobileNavigation from "./MobileNavigation.astro";
 import { navigations } from "../data/en/navigations";
 ---
@@ -40,21 +42,9 @@ import { navigations } from "../data/en/navigations";
       <a
         href="/"
         hx-indicator=".progress-bar"
-        class="btn btn-square btn-ghost no-animation text-xl"
+        class="btn btn-circle btn-ghost no-animation text-xl"
       >
-        <svg
-          width="120"
-          height="120"
-          version="1.1"
-          viewBox="0 0 120 120"
-          xmlns="http://www.w3.org/2000/svg"
-          class="fill-current w-10 h-10"
-        >
-          <title>Taufik Nurhidayat Logo</title>
-          <path
-            d="m15 20v15h25v65l15 15v-95zm50 0v95l15-15v-65h25v-15zm-50 25v32.5l15 15v-47.5zm75 0v47.5l15-15v-32.5z"
-          ></path>
-        </svg>
+        <Image src={face} alt="Taufik Nurhidayat" class="rounded-full" />
       </a>
     </div>
     <div class="flex-none">
