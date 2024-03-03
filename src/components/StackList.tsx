@@ -70,10 +70,10 @@ export default function StackList() {
   return (
     <div class="flex flex-wrap gap-1">
       {iconList.map((item) => (
-        <button class="btn btn-secondary no-animation">
+        <span class="bg-secondary inline-flex px-4 py-3 rounded-btn text-secondary-content text-sm font-semibold gap-2">
           <item.icon />
           <span>{item.title}</span>
-        </button>
+        </span>
       ))}
     </div>
   );

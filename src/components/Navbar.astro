@@ -1,17 +1,17 @@
 ---
 import { Image } from "astro:assets";
-import face from "../../public/face.jpg";
+import face from "../../public/face2.jpg";
 import MobileNavigation from "./MobileNavigation.astro";
 import { navigations } from "../data/en/navigations";
 ---
 
 <header class="top-0" id="header">
-  <nav class="container lg:max-w-6xl mx-auto navbar bg-base-100">
+  <nav class="container lg:max-w-6xl mx-auto navbar bg-base-100 py-3">
     <div class="flex-1">
       <div class="dropdown lg:hidden">
         <button
           tabindex="0"
-          class="btn btn-ghost btn-square"
+          class="btn btn-ghost btn-square mr-2"
           aria-label="Menu"
           id="menu_button"
         >
@@ -44,11 +44,17 @@ import { navigations } from "../data/en/navigations";
         hx-indicator=".progress-bar"
         class="btn btn-circle btn-ghost no-animation text-xl"
       >
-        <Image src={face} alt="Taufik Nurhidayat" class="rounded-full" />
+        <Image
+          src={face}
+          alt="Taufik Nurhidayat"
+          class="rounded-full"
+          height={64}
+          width={64}
+        />
       </a>
     </div>
     <div class="flex-none">
-      <ul class="hidden lg:flex text-sm">
+      <ul class="hidden lg:flex text-sm font-semibold">
         {
           navigations.map((item) => (
             <li>

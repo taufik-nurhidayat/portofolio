@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import MeSquare from "../images/profile-square.png";
-  import Me from "../images/profile.png";
+import MeSquare from "../../public/full-body-square.png";
+import Me from "../../public/full-body.png";
 ---
 
 <section class="container lg:max-w-6xl px-4 my-8 lg:my-16 mx-auto">
@@ -9,12 +9,16 @@ import MeSquare from "../images/profile-square.png";
     <div class="lg:order-last w-full lg:w-6/12">
       <Image
         src={MeSquare}
+        width={448}
+        height={448}
         class="w-full lg:hidden max-w-md mx-auto lg:mr-0"
         alt="Taufik Nurhidayat"
       />
       <Image
         src={Me}
         class="w-full hidden lg:block max-w-md mx-auto lg:mr-0"
+        width={448}
+        height={535}
         alt="Taufik Nurhidayat"
       />
     </div>
