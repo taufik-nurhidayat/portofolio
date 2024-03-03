@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import MeSquare from "../../public/full-body-square.png";
 import Me from "../../public/full-body.png";
 ---
 
@@ -8,17 +7,10 @@ import Me from "../../public/full-body.png";
   <div class="flex flex-wrap gap-8 lg:gap-0 items-center">
     <div class="lg:order-last w-full lg:w-6/12">
       <Image
-        src={MeSquare}
+        src={Me}
         width={448}
         height={448}
-        class="w-full lg:hidden max-w-md mx-auto lg:mr-0"
-        alt="Taufik Nurhidayat"
-      />
-      <Image
-        src={Me}
-        class="w-full hidden lg:block max-w-md mx-auto lg:mr-0"
-        width={448}
-        height={535}
+        class="w-full max-w-md mx-auto lg:mr-0"
         alt="Taufik Nurhidayat"
       />
     </div>
