@@ -3,6 +3,7 @@ title: Novelindo Web App
 cover: /novelindo/cover.png
 website: https://www.novelindo.my.id
 featured: true
+excerpt: Novelindo adalah aplikasi web yang menyediakan konten berupa novel ringan dan anime. Selain itu, Novelindo juga berisi informasi mengenai tulisan.
 ---
 
 Novelindo adalah aplikasi web yang menyediakan konten berupa novel ringan dan anime. Selain itu, Novelindo juga berisi informasi mengenai tulisan.
