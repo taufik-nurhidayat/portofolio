@@ -5,6 +5,7 @@ const projectCollection = defineCollection({
     title: z.string(),
     featured: z.boolean(),
     cover: z.string(),
+    excerpt: z.string(),
   }),
 });
 export const collections = {
