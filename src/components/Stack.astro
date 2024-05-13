@@ -1,8 +1,89 @@
 ---
 import Section from "./Section.astro";
-import StackList from "./StackList.tsx";
+
+const stack_lists = [
+  {
+    title: "HTML5",
+    icon: "html5",
+  },
+  {
+    title: "CSS3",
+    icon: "css3",
+  },
+  {
+    title: "React",
+    icon: "react",
+  },
+  {
+    title: "Svelte",
+    icon: "svelte",
+  },
+  {
+    title: "Apine.js",
+    icon: "alpinedotjs",
+  },
+  {
+    title: "HTMX",
+    icon: "htmx",
+  },
+  {
+    title: "Tailwind CSS",
+    icon: "tailwindcss",
+  },
+  {
+    title: "Next.js",
+    icon: "nextdotjs",
+  },
+  {
+    title: "Actix",
+    icon: "actix",
+  },
+  {
+    title: "Astro",
+    icon: "astro",
+  },
+  {
+    title: "TypeScript",
+    icon: "typescript",
+  },
+  {
+    title: "JavaScript",
+    icon: "javascript",
+  },
+  {
+    title: "Rust",
+    icon: "Rust",
+  },
+  {
+    title: "PostgreSQL",
+    icon: "postgresql",
+  },
+  {
+    title: "Docker",
+    icon: "docker",
+  },
+  {
+    title: "Podman",
+    icon: "podman",
+  },
+];
 ---
 
 <Section title="Tech Stack" id="stack">
-  <StackList />
+  <div class="flex flex-wrap gap-1 select-none">
+    {
+      stack_lists.map((item) => (
+        <span class="bg-base-100 inline-flex cursor-default gap-2 px-4 py-3 text-sm font-semibold border rounded hover:shadow-lg hover:-translate-y-2 ease-in duration-150">
+          <img
+            height="200"
+            width="200"
+            class="w-5 h-5"
+            src={`https://cdn.simpleicons.org/${item.icon}`}
+            alt={item.title}
+          />
+          <span>{item.title}</span>
+        </span>
+      ))
+    }
+  </div>
 </Section>
