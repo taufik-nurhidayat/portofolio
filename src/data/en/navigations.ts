@@ -11,7 +11,7 @@ export const navigations: NavigationInterface[] = [
   },
   {
     title: "Blog",
-    link: "https://www.nurhidayat.web.id",
+    link: "https://www.nurhidayat.dev",
   },
   {
     title: "Affiliates",
