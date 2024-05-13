@@ -7,7 +7,7 @@ export const navigations: NavigationInterface[] = [
   },
   {
     title: "About",
-    link: "/about",
+    link: "#about",
   },
   {
     title: "Blog",
