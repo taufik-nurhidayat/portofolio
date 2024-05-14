@@ -1,6 +1,5 @@
 ---
 import Section from "./Section.astro";
-import ExperienceList from "./ExperienceList.tsx";
 interface ExperienceInterface {
   title: string;
   company: string;
@@ -19,13 +18,13 @@ const exList: ExperienceInterface[] = [
   {
     title: "Freelance SEO Writer",
     company: "Play.id",
-    location: "https://www.play.id",
+    location: "https://www.play.id/author/taufik/",
     date: "2022 - 2023",
   },
   {
     title: "Freelance SEO Writer",
     company: "Dewabiz",
-    location: "https://academy.sontre.id",
+    location: "https://dewabiz.com/author/taufik/",
     date: "2022",
   },
 ];
@@ -42,9 +41,20 @@ const exList: ExperienceInterface[] = [
           <div class="px-4">
             <time class="italic text-sm text-slate-700">{item.date}</time>
             <h3 class="text-xl font-semibold">
-              {item.title} {item.company && `at ${item.company}`}
+              {item.title}{" "}
+              {item.company && (
+                <span>
+                  at{" "}
+                  <a
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                    href={item.location}
+                  >
+                    {item.company}
+                  </a>
+                </span>
+              )}
             </h3>
-            <div class="mt-2">{item.body}</div>
           </div>
         </li>
       ))
