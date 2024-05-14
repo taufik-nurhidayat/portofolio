@@ -1,0 +1,64 @@
+---
+import Section from "./Section.astro";
+interface ExperienceInterface {
+  title: string;
+  company: string;
+  location: string;
+  body?: string;
+  date: string;
+}
+const exList: ExperienceInterface[] = [
+  {
+    title: "Freelance Fullstack Developer",
+    company: "",
+    location: "",
+    body: "<p>Hello</p>",
+    date: "Since 2023",
+  },
+  {
+    title: "Freelance SEO Writer",
+    company: "Play.id",
+    location: "https://www.play.id/author/taufik/",
+    date: "2022 - 2023",
+  },
+  {
+    title: "Freelance SEO Writer",
+    company: "Dewabiz",
+    location: "https://dewabiz.com/author/taufik/",
+    date: "2022",
+  },
+];
+---
+
+<Section title="Experiences" id="experiences">
+  <ul class="space-y-6 border-l-4">
+    {
+      exList.map((item) => (
+        <li class="group flex">
+          <div class="">
+            <span class="-ml-2 inline-flex w-3 h-3 rounded-full bg-accent" />
+          </div>
+          <div class="px-4">
+            <time class="italic text-sm text-slate-700">{item.date}</time>
+            <h3 class="text-xl font-semibold">
+              {item.title}{" "}
+              {item.company && (
+                <span>
+                  at{" "}
+                  <a
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                    href={item.location}
+                  >
+                    {item.company}
+                  </a>
+                </span>
+              )}
+            </h3>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+  <!-- <ExperienceList /> -->
+</Section>

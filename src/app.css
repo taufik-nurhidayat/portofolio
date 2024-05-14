@@ -1,0 +1,8 @@
+.prose h1::after,
+.prose h2::after,
+.prose h3::after,
+.prose h4::after,
+.prose h5::after,
+.prose h6::after {
+  content: "hello";
+}

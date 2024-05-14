@@ -1,0 +1,19 @@
+---
+import { navigations } from "../data/en/navigations";
+---
+
+<ul
+  class="menu dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 border"
+  aria-labelledby="menu_button"
+  aria-hidden="true"
+>
+  {
+    navigations.map((item) => (
+      <li>
+        <a hx-indicator=".progress-bar" href={item.link}>
+          {item.title}
+        </a>
+      </li>
+    ))
+  }
+</ul>

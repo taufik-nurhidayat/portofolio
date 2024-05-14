@@ -1,0 +1,34 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+export async function getStaticPaths() {
+  const projectList = await getCollection("project");
+  return projectList.map((e) => ({
+    params: {
+      slug: e.slug,
+    },
+    props: e,
+  }));
+}
+
+const {
+  slug,
+  data: { title, cover },
+  body,
+  render,
+} = Astro.props;
+const { Content } = await render();
+---
+
+<Layout title={`${title} - Taufik Project`}>
+  <article class="mx-auto px-4 prose">
+    <header>
+      <img src={cover} alt={title} />
+      <h1>
+        {title}
+      </h1>
+    </header>
+    <section><Content /></section>
+    <footer></footer>
+  </article>
+</Layout>
