@@ -1,0 +1,51 @@
+---
+import {Image} from "astro:assets"
+import Section from "./Section.astro";
+const api_url  = import.meta.env.SUPABASE_API_URL;
+const apikey  = import.meta.env.SUPABASE_CLIENT_ANON_KEY;
+
+const params = new URLSearchParams({
+  draft: 'eq.false',
+  author: 'eq.a587dbdf-4abd-46a8-910f-5f8a288f6511',
+  select: 'title,slug,published_at,description,excerpt,cover',
+  order: 'published_at.desc',
+  limit: "9",
+  apikey
+});
+const data = await fetch(`${api_url}/rest/v1/blog?${params.toString()}`).then(res => res.json());
+---
+<Section title="Insights" id="insights" description="Continuously excelling through the knowledge I’ve gained and the lessons I’m still uncovering.">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+    {data?.map((insight:any) => (
+      <div class="border hover:shadow-lg duration-150">
+        <div class="aspect-video relative">
+        <a href={`https://www.nurhidayat.dev/blog/${insight.slug}`}>
+          {insight.cover?
+          (
+            <Image
+              class="w-full h-full object-cover"
+              src={insight.cover}
+              inferSize
+              title={insight.title}
+              alt={insight.title}
+            />
+            ):(
+            <span role="img" aria-label={insight.title} class="w-full h-full bg-gray-300 flex items-center justify-center text-xl font-bold uppercase text-gray-700 select-none">NO IMAGE</span>
+            )
+          }
+        </a>
+        </div>
+        <div class="p-6">
+          <h3 class="text-lg font-semibold">
+            <a href={`https://www.nurhidayat.dev/blog/${insight.slug}`}>
+              {insight.title}
+            </a>
+          </h3>
+        </div>
+      </div>
+      ))}
+  </div>
+  <div class="mt-8 text-center">
+  <a href="https://www.nurhidayat.dev/blog" class="btn btn-primary">View all Insights</a>
+  </div>
+</Section>
