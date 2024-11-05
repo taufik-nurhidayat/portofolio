@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import Section from "./Section.astro";
 const projects = await getCollection("project", ({ data }) => {
@@ -11,11 +12,13 @@ const projects = await getCollection("project", ({ data }) => {
     {
       projects.map((project) => (
         <div>
-          <div class="group relative">
-            <img src={project.data.cover} alt={project.data.title} class="" />
+          <div class="group relative aspect-video">
+            <img class="w-full h-full object-cover" src={project.data.cover} alt={project.data.title} />
             <a
               href={`/projects/${project.slug}`}
               class="hidden group-hover:flex absolute top-0 left-0 bottom-0 right-0 items-center justify-center bg-base-100/60"
+              role="button"
+              aria-label={`Read more about ${project.data.title}`}
             >
               <span class="btn btn-outline no-animation">Full Story</span>
             </a>

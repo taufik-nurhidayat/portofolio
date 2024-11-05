@@ -10,6 +10,6 @@ import playformCompress from "@playform/compress";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), markdoc(), playformCompress()],
-  output: "hybrid",
+  output: "server",
   adapter: cloudflare()
 });
