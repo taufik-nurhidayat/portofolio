@@ -3,7 +3,7 @@ import Section from "./Section.astro";
 interface ExperienceInterface {
   title: string;
   company: string;
-  location: string;
+  location?: string;
   body?: string;
   date: string;
 }
@@ -11,12 +11,11 @@ const exList: ExperienceInterface[] = [
   {
     title: "Freelance Fullstack Developer",
     company: "",
-    location: "",
     date: "Since 2023",
   },
   {
     title: "Intern Visual Developer",
-    date: "August - October 2024",
+    date: "June - September 2024",
     location: "https://www.indata.id",
     company: "Indata",
   },
@@ -53,6 +52,7 @@ const exList: ExperienceInterface[] = [
                   <a
                     target="_blank"
                     rel="nofollow noopener noreferrer"
+                    class:list={[{"underline": item.location}]}
                     href={item.location}
                   >
                     {item.company}
