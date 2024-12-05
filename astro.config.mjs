@@ -10,7 +10,7 @@ import node from "@astrojs/node";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), markdoc(), playformCompress()],
-  output: "hybrid",
+  output: "static",
   adapter: node({
     mode: "standalone"
   })
