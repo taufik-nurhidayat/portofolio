@@ -4,12 +4,12 @@ interface Props {
   title: string;
   description?: string;
 }
-let { id, title,description } = Astro.props;
+let { id, title, description } = Astro.props;
 ---
 
 <section
   id={id}
-  class="mx-auto px-4 container lg:max-w-6xl py-16"
+  class="container mx-auto px-4 py-16 lg:max-w-6xl"
   style="margin-top: -5rem; padding-top: 5rem;"
 >
   <div>
