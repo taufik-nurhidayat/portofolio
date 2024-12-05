@@ -6,12 +6,12 @@ import { navigations } from "../data/en/navigations";
 ---
 
 <header class="top-0 z-30" id="header">
-  <nav class="container lg:max-w-6xl mx-auto navbar bg-base-100 px-4 py-3">
+  <nav class="container navbar mx-auto bg-base-100 px-4 py-3 lg:max-w-6xl">
     <div class="flex-1">
       <div class="dropdown lg:hidden">
         <button
           tabindex="0"
-          class="btn btn-ghost btn-square mr-2"
+          class="btn btn-square btn-ghost mr-2"
           aria-label="Menu"
           id="menu_button"
         >
@@ -54,13 +54,13 @@ import { navigations } from "../data/en/navigations";
       </a>
     </div>
     <div class="flex-none">
-      <ul class="hidden lg:flex text-sm font-semibold">
+      <ul class="hidden text-sm font-semibold lg:flex">
         {
           navigations.map((item) => (
             <li>
               <a
                 href={item.link}
-                class="inline-flex items-center px-4 hover:opacity-75 duration-300"
+                class="inline-flex items-center px-4 duration-300 hover:opacity-75"
                 style="max-height: 3rem;height: 3rem;"
               >
                 {item.title}

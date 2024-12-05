@@ -12,16 +12,14 @@ export async function getStaticPaths() {
 }
 
 const {
-  slug,
   data: { title, cover },
-  body,
   render,
 } = Astro.props;
 const { Content } = await render();
 ---
 
 <Layout title={`${title} - Taufik Project`}>
-  <article class="mx-auto px-4 prose">
+  <article class="prose mx-auto px-4">
     <header>
       <img src={cover} alt={title} />
       <h1>

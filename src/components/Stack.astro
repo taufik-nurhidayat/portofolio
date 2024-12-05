@@ -90,14 +90,14 @@ const stack_lists = [
 ---
 
 <Section title="Stack and Tools" id="stack">
-  <div class="flex flex-wrap gap-1 select-none">
+  <div class="flex select-none flex-wrap gap-1">
     {
       stack_lists.map((item) => (
-        <span class="bg-base-100 inline-flex cursor-default gap-2 px-4 py-3 text-sm font-semibold border rounded-btn hover:shadow-lg hover:-translate-y-2 ease-in duration-150">
+        <span class="inline-flex cursor-default gap-2 rounded-btn border bg-base-100 px-4 py-3 text-sm font-semibold duration-150 ease-in hover:-translate-y-2 hover:shadow-lg">
           <img
             height="200"
             width="200"
-            class="w-5 h-5"
+            class="h-5 w-5"
             src={`https://cdn.simpleicons.org/${item.icon}`}
             alt={item.title}
           />

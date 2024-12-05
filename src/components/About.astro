@@ -4,28 +4,28 @@ import Me from "../../public/full-body.png";
 import Sosmed from "./Sosmed.astro";
 ---
 
-<section id="about" class="container lg:max-w-6xl px-4 my-8 lg:my-16 mx-auto">
-  <div class="flex flex-wrap gap-8 lg:gap-0 items-center">
-    <div class="lg:order-last w-full lg:w-6/12">
+<section id="about" class="container mx-auto my-8 px-4 lg:my-16 lg:max-w-6xl">
+  <div class="flex flex-wrap items-center gap-8 lg:gap-0">
+    <div class="w-full lg:order-last lg:w-6/12">
       <Image
         src={Me}
         width={448}
         height={448}
-        class="w-full max-w-md mx-auto lg:mr-0"
+        class="mx-auto w-full max-w-md lg:mr-0"
         alt="Taufik Nurhidayat"
       />
     </div>
     <div class="w-full lg:w-6/12">
       <p class="text-xl text-slate-700">Hi, i am Taufik Nurhidayat</p>
-      <h1 class="text-4xl mt-2 font-bold">Developer and Writer</h1>
-      <p class="text-slate-700 mt-8">
+      <h1 class="mt-2 text-4xl font-bold">Developer and Writer</h1>
+      <p class="mt-8 text-slate-700">
         I'm a passionate freelance web developer with over a year of experience
         in crafting robust web applications. Skilled in Next.js (React),
         Tailwind CSS, TypeScript, and Rust. Known for my adaptability and quick
         learning, I thrive in dynamic environments. Let's create something
         amazing together!
       </p>
-      <Sosmed/>
-      </div>
+      <Sosmed />
+    </div>
   </div>
 </section>
