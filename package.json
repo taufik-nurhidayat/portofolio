@@ -7,6 +7,9 @@
     "start": "HOST=0.0.0.0 node dist/server/entry.mjs",
     "build": "astro check && astro build",
     "preview": "astro preview",
+    "format": "prettier ./src --write",
+    "lint": "prettier ./src --check",
+    "lint:fix": "prettier ./src --check --write",
     "astro": "astro"
   },
   "dependencies": {
