@@ -3,7 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import Section from "@/components/Section.astro";
 const projects = (await getCollection("project")).sort(
-  (a, b) => Date.parse(b.data.createdAt) - Date.parse(a.data.createdAt),
+  (a, b) => b.data.createdAt.getTime() - a.data.createdAt.getTime(),
 );
 ---
 

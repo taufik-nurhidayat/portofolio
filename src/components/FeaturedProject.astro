@@ -6,7 +6,7 @@ const projects = (
     return data.featured === true;
   })
 )
-  .sort((a, b) => Date.parse(b.data.createdAt) - Date.parse(a.data.createdAt))
+  .sort((a, b) => b.data.createdAt.getTime() - a.data.createdAt.getTime())
   .slice(0, 4);
 ---
 
