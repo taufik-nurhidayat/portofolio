@@ -1,0 +1,28 @@
+---
+import { footerNavigations } from "../data/en/footer_navigations";
+---
+
+<footer class="border-t pt-6">
+  <div class="container navbar mx-auto bg-base-100 px-4 py-3 lg:max-w-6xl">
+    <nav class="flex w-full flex-col gap-8">
+      <ul class="grid w-full gap-8 lg:grid-cols-3">
+        {
+          footerNavigations.map((nav) => (
+            <li>
+              <p class="text-lg font-semibold">{nav.title}</p>
+              <ul class="mt-4 space-y-2">
+                {nav.navigations.map((item) => (
+                  <li>
+                    <a href={item.link} class="hover:underline">
+                      {item.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</footer>
