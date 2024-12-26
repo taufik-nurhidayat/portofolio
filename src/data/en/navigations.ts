@@ -14,7 +14,11 @@ export const navigations: NavigationInterface[] = [
     link: "https://www.nurhidayat.dev",
   },
   {
-    title: "Affiliates",
-    link: "/",
+    title: "Projects",
+    link: "/projects",
+  },
+  {
+    title: "Pomodoro",
+    link: "https://pomodoro.nurhidayat.dev",
   },
 ];

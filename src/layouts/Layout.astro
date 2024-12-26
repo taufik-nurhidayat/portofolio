@@ -1,6 +1,7 @@
 ---
 import "../app.css";
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 import ProgressBar from "../components/ProgressBar.astro";
 interface Props {
   title: string;
@@ -30,5 +31,6 @@ const { title } = Astro.props;
     <main>
       <slot />
     </main>
+    <Footer />
   </body>
 </html>

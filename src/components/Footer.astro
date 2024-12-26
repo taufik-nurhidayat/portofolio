@@ -1,0 +1,29 @@
+---
+import { footerNavigations } from "../data/en/footer_navigations";
+---
+
+<footer class="mt-10 border-t pt-6 lg:mt-16">
+  <div class="container mx-auto bg-base-100 px-4 py-3 lg:max-w-6xl">
+    <nav class="flex w-full flex-col gap-8">
+      <ul class="grid w-full gap-8 lg:grid-cols-3">
+        {
+          footerNavigations.map((nav) => (
+            <li>
+              <p class="text-lg font-semibold">{nav.title}</p>
+              <ul class="mt-4 space-y-2">
+                {nav.navigations.map((item) => (
+                  <li>
+                    <a href={item.link} class="hover:underline">
+                      {item.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+    <div class="mt-8 text-sm">&copy; 2025 Taufik Nurhidayat</div>
+  </div>
+</footer>

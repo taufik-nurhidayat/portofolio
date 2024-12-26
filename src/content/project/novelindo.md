@@ -1,57 +1,52 @@
 ---
 title: Novelindo Web App
 cover: /novelindo/cover.png
-website: https://www.novelindo.my.id
+website: https://novelindo.vercel.app/
 featured: true
-excerpt: Novelindo adalah aplikasi web yang menyediakan konten berupa novel ringan dan anime. Selain itu, Novelindo juga berisi informasi mengenai tulisan.
+excerpt: Novelindo adalah aplikasi web yang menyediakan konten berupa novel ringan dan anime, serta informasi terkait tulisan.
+createdAt: 2023-01-01
 ---
 
-Novelindo adalah aplikasi web yang menyediakan konten berupa novel ringan dan anime. Selain itu, Novelindo juga berisi informasi mengenai tulisan.
+**Novelindo** adalah aplikasi web yang menyediakan konten berupa novel ringan, anime, serta informasi terkait tulisan.
 
 ## Teknologi yang Digunakan
 
-### Next.js
+- **Next.js**: Digunakan sebagai framework React untuk frontend karena fitur lengkapnya dan performa render yang cepat.
+- **TailwindCSS**: Mempermudah pengaturan tata letak dan gaya dengan gaya yang dapat digunakan kembali, mempercepat proses pengembangan.
+- **Contentlayer**: Mengelola konten dengan markdown untuk mengurangi biaya server, meskipun membutuhkan sedikit penyesuaian awal.
 
-Nextjs dipilih sebagai framework react untuk frontend karena fitur yang lengkap dan render web yang cepat.
+## Fitur-Fitur
 
-## TailwindCSS
+### 1. **Halaman Utama**
 
-Untuk mempermudah proses pengaturan tata letak dan gaya, TailwindCSS dipilih karena selain mempercepat proses pengembangan juga membuat style yang telah ada dapat digunakan kembali.
+Menampilkan daftar novel dan anime unggulan.
 
-## Contentlayer
+### 2. **Navigasi dan Header**
 
-Untuk mengelola konten, kami menggunakan Contentlayer dan markdown. Meski butuh sedikit penyesuaian untuk menguasainya namun Contentlayer dapat menghemat biaya karena tidak memerlukan server.
+- **Navigasi**: Memudahkan akses ke halaman seperti Home, Novel, Anime, Blog, dan Bookmark.
+- **Header**: Menampilkan logo dan bilah pencarian.
 
-## Fitur-fitur
+### 3. **Halaman Novel dan Anime**
 
-### Halaman Utama
+- **Index**: Menampilkan semua daftar novel atau anime.
+- **Info**: Memuat informasi seperti sinopsis, genre, daftar chapter (novel), dan daftar episode atau season (anime).
+- **Baca Chapter & Tonton Anime**:
+  - **Novel**: Pagination untuk chapter berikutnya/sebelumnya dan tombol kembali ke atas.
+  - **Anime**: Video yang dapat ditonton dengan daftar episode yang di-highlight untuk episode aktif.
 
-Menampilkan daftar-daftar novel dan anime yang difiturkan.
+### 4. **Halaman Blog**
 
-### Navigasi dan Header
+- **Index Blog**: Menampilkan semua artikel yang telah dipublikasikan.
+- **Baca Artikel**: Menampilkan konten artikel secara lengkap.
 
-Mempermudah pengguna untuk melakukan navigasi pada halaman-halaman utama seperti home, novel, anime, blog dan bookmark. Sedangkan pada header, hanya menampilkan logo dan bilah pencarian.
+### 5. **Halaman Bookmark**
 
-### Halaman Novel dan Anime
+Menampilkan konten yang disimpan oleh pengguna, termasuk novel, anime, dan artikel.
 
-Halaman Novel dan Anime terbagi menjadi beberapa bagian.
+### 6. **Komentar**
 
-- **Index**: Menampilkan daftar semua novel atau Anime
-- **Info**: Menampilkan informasi baik novel maupun anime, seperti sinopsis dan genre. Untuk halaman novel menampilkan daftar chapter, sedangkan halaman anime menampilkan daftar episode dan season.
-- **Baca Chapter dan Tonton Anime**: Pada halaman membaca chapter tersedia pagination untuk chapter selanjutnya maupun sebelumnya dan terdapat tombol kembali keatas. Sedangkan pada halaman tonton anime berisi video yang dapat ditonton, pagination diganti dengan daftar chapter yang diberi highlight pada episode yang sedang ditonton.
+Fitur komentar menggunakan Disqus tersedia untuk novel, anime, dan blog, kecuali pada halaman chapter novel.
 
-### Halaman Blog
+### 7. **Halaman Error**
 
-Terdapat dua bagian dimana ada index blog yang menampilkan semua artikel yang telah dipublikasikan. Sedangkan halaman baca artikel menampilkan konten artikel itu sendiri.
-
-### Halaman Bookmark
-
-Menampilkan konten yang disimpan baik berupa novel, anime dan artikel.
-
-### Komentar
-
-Setiap konten yang berupa novel, anime dan blog memiliki fitur komentar dari disqus kecuali halaman chapter dari novel.
-
-### Halaman Error
-
-Ketika halaman tidak ditemukan, pengguna akan mendapatkan informasi error dan tombol kembali ke halaman utama.
+Memberikan informasi error dengan tombol untuk kembali ke halaman utama jika halaman tidak ditemukan.

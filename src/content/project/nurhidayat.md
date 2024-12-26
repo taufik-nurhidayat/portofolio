@@ -4,6 +4,7 @@ cover: /nurhidayat/cover.png
 website: https://www.nurhidayat.web.id
 featured: true
 excerpt: Nurhidayat adalah website yang menyediakan informasi berupa artikel yang berkaitan dengan teknologi, terutama teknologi komputer. Salah satu konten yang dibahas adalah open source, pemrograman, blogging, website dan desain grafis.
+createdAt: 2023-01-02
 ---
 
 Nurhidayat adalah website yang menyediakan informasi berupa artikel yang berkaitan dengan teknologi, terutama teknologi komputer. Salah satu konten yang dibahas adalah open source, pemrograman, blogging, website dan desain grafis.
