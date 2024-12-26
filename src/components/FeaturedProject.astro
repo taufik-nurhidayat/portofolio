@@ -1,9 +1,13 @@
 ---
 import { getCollection } from "astro:content";
 import Section from "./Section.astro";
-const projects = await getCollection("project", ({ data }) => {
-  return data.featured === true;
-});
+const projects = (
+  await getCollection("project", ({ data }) => {
+    return data.featured === true;
+  })
+)
+  .sort((a, b) => Date.parse(b.data.createdAt) - Date.parse(a.data.createdAt))
+  .slice(0, 4);
 ---
 
 <Section id="featured_project" title="Featured Project">
