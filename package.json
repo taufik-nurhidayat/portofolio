@@ -16,7 +16,7 @@
     "@astrojs/check": "0.9.4",
     "@astrojs/cloudflare": "12.2.1",
     "@astrojs/markdoc": "0.12.4",
-    "@astrojs/node": "9.0.0",
+    "@astrojs/node": "9.0.3",
     "@astrojs/tailwind": "5.1.5",
     "@playform/compress": "0.1.6",
     "astro": "5.1.8",
