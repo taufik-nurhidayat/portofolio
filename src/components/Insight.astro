@@ -13,7 +13,7 @@ const params = new URLSearchParams({
   apikey,
 });
 const data = await fetch(`${api_url}/rest/v1/blog?${params.toString()}`).then(
-  (res) => res.json(),
+  (res) => res.json()
 );
 ---
 
